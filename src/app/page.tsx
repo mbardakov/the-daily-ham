@@ -5,7 +5,7 @@ export default function Ham() {
 		<div>
 			<h1 className="font-bold text-4xl">The Daily Ham</h1>
 			<Image
-				className="grayscale"
+				className="grayscale rounded-xl"
 				src="/ham_bonk.png"
 				alt="A brown dog getting bonked by a blue scoop"
 				width={756}
