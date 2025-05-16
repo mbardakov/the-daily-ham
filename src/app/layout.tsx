@@ -23,7 +23,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 	return (
 		<html lang="en">
 			<body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-black`}>
-				<div className="mx-auto w-fit font-mono">
+				<div className="mx-auto w-fit font-mono max-w-3xl">
 					<Navbar>
 						{links.map(link => <NavbarLink href={link.href} label={link.label} key={link.label}/>)}
 					</Navbar>
