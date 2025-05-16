@@ -1,0 +1,1 @@
+export const navbarStyles = 'inline px-2 py-2 hover:bg-white dark:hover:bg-black text-white hover:text-black dark:text-black dark:hover:text-white';
