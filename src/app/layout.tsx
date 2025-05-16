@@ -1,17 +1,8 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link"
+import type { Metadata } from "next";
 import "./globals.css";
 
-const geistSans = Geist({
-	variable: "--font-geist-sans",
-	subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-	variable: "--font-geist-mono",
-	subsets: ["latin"],
-});
+import { geistMono, geistSans } from "./globals";
 
 export const metadata: Metadata = {
 	title: "The Daily Ham",
@@ -20,17 +11,17 @@ export const metadata: Metadata = {
 
 function Navbar() {
 	return(
-		<ul className='list-none m-0 p-0 font-mono'>
-			<NavbarItem href='/' label='Home' />
-			<NavbarItem href='/wife' label='Wife' />
-			<NavbarItem href='/not-found' label='404' />
+		<ul className="list-none m-0 p-0 font-mono bg-black dark:bg-white">
+			<NavbarLink href="/" label="Home" />
+			<NavbarLink href="/wife" label="Wife" />
+			<NavbarLink href="/not-found" label="404" />
 		</ul>
 	)
 }
 
-function NavbarItem({href, label}: Readonly<{ href: string, label: string }>) {
+function NavbarLink({href, label}: Readonly<{ href: string, label: string }>) {
 	return (
-		<li className='inline px-2 py-2'>
+		<li className="inline px-2 py-2 hover:bg-white dark:hover:bg-black text-white hover:text-black dark:text-black dark:hover:text-white">
 			<Link href={href}>
 				{label}
 			</Link>
@@ -41,9 +32,11 @@ function NavbarItem({href, label}: Readonly<{ href: string, label: string }>) {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
 	return (
 		<html lang="en">
-			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-				<Navbar />
-				{children}
+			<body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-black`}>
+				<div className="mx-auto w-fit font-mono">
+					<Navbar />
+					{children}
+				</div>
 			</body>
 		</html>
 	);
