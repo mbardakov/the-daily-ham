@@ -5,10 +5,13 @@ const nextConfig: NextConfig = {
   output: 'export',
   reactStrictMode: true,
   assetPrefix: "/",
+  // images: {
+  //   loader: 'custom',
+  //   loaderFile: 'src/app/util/loader.ts',
+  // },
   images: {
-    loader: 'custom',
-    loaderFile: 'src/app/util/loader.ts',
-  },
+    unoptimized: true,
+  }
   /* config options here */
 };
 
