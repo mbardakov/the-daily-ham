@@ -1,4 +1,4 @@
-import { navbarStyles } from "./common"
+import { navbarStyles } from "@/components/common"
 
 export default function NavbarLink({label, callback}: Readonly<{ label: string, callback: () => void }>) {
 	return (

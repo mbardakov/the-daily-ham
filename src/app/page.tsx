@@ -9,7 +9,7 @@ export default function Ham() {
 				{filenames.map(filename =>
 					<Image
 					className="grayscale contrast-125 rounded-md mb-4"
-					src={'/' + filename + '.png'}
+					src={'/the-daily-ham/' + filename + '.png'}
 					alt="A brown dog getting bonked by a blue scoop"
 					width={756}
 					height={1008}

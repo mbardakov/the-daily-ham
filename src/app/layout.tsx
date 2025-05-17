@@ -1,10 +1,10 @@
 
 import type { Metadata } from "next";
-import Navbar from "./components/navbar";
-import NavbarLink from "./components/navbar-link";
-import "./globals.css";
+import Navbar from "@/components/navbar";
+import NavbarLink from "@/components/navbar-link";
+import "@/globals.css";
 
-import { geistMono, geistSans } from "./globals";
+import { geistMono, geistSans } from "@/globals";
 
 export const metadata: Metadata = {
 	title: "The Daily Ham",

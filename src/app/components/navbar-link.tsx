@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { navbarStyles } from "./common"
+import { navbarStyles } from "@/components/common"
 
 export default function NavbarLink({href, label}: Readonly<{ href: string, label: string }>) {
 	return (
