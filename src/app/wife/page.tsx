@@ -1,7 +1,7 @@
 export default function Wife() {
 	return (
-		<>
-			<h1 className="font-bold text-4xl my-2 max-w-3xl">Hello my wife. I love you</h1>
-		</>
+		<div className="flex w-3xl max-w-screen">
+			<h1 className="font-bold text-4xl my-2">Hello my wife. I love you</h1>
+		</div>
 	)
 }
